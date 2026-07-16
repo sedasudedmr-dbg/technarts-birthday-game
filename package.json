@@ -1,0 +1,8 @@
+{
+  "name": "technarts-birthday-game",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "resend": "^6.0.0"
+  }
+}
