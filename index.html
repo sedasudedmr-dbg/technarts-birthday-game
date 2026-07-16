@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090d21" />
+  <title>Technarts Pixel Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-logo"><span>T</span></div>
+    <h1>TECHNARTS<br><em>PIXEL BIRTHDAY</em></h1>
+    <p>MISSION LOADING...</p>
+    <div class="loader"><div id="loaderBar"></div></div>
+    <strong id="loaderPercent">0%</strong>
+  </div>
+
+  <main id="app" class="hidden">
+    <header class="hud">
+      <div class="employee-card">
+        <div class="avatar">S</div>
+        <div>
+          <b id="employeeName">SEDA</b>
+          <span class="hearts">♥ ♥ ♥</span>
+          <small>AGE: <strong id="employeeAge">24</strong></small>
+        </div>
+      </div>
+      <div class="mission">
+        <b>MISSION</b>
+        <span>FIND YOUR BIRTHDAY CAKE!</span>
+      </div>
+      <div class="coin-panel">
+        <b>COIN</b>
+        <span id="coinCount">00</span>
+      </div>
+    </header>
+
+    <section class="game-shell">
+      <canvas id="game" width="1280" height="640" aria-label="Technarts doğum günü platform oyunu"></canvas>
+
+      <div id="introCard" class="overlay-card">
+        <p>WELCOME</p>
+        <h2 id="welcomeName">SEDA</h2>
+        <small>Blokları kır, Technarts logolarını topla ve pastaya ulaş!</small>
+        <button id="startButton">START MISSION</button>
+      </div>
+
+      <div id="birthdayCard" class="overlay-card birthday-card hidden">
+        <p>LEVEL UP!</p>
+        <h2>İYİ Kİ DOĞDUN!</h2>
+        <div class="level-text">LEVEL <span id="newAgeText">24</span> UNLOCKED</div>
+        <small>Yeni yaşın sağlık, mutluluk, başarı ve bol kahkaha getirsin!<br><br>TECHNARTS AİLESİ 💜</small>
+        <button id="restartButton">TEKRAR OYNA</button>
+      </div>
+
+      <div id="blowHint" class="blow-hint hidden">DİLEĞİNİ TUT — SPACE / ÜFLE</div>
+    </section>
+
+    <section class="controls-info">
+      <span>← → HAREKET</span>
+      <span>SPACE ZIPLA / MUMU ÜFLE</span>
+      <span>TELEFONDA EKRAN TUŞLARINI KULLAN</span>
+    </section>
+
+    <nav class="mobile-controls" aria-label="Dokunmatik oyun kontrolleri">
+      <div>
+        <button id="leftBtn" aria-label="Sola git">◀</button>
+        <button id="rightBtn" aria-label="Sağa git">▶</button>
+      </div>
+      <button id="actionBtn" class="action" aria-label="Zıpla veya mumu üfle">SPACE</button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
